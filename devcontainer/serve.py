@@ -16,7 +16,7 @@ import sys
 import logging
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(".env")
 logging.basicConfig(
     level=logging.DEBUG if os.getenv("DEBUG") is not None else logging.INFO
 )
@@ -63,7 +63,6 @@ def main():
     p = Popen(["hugo", "serve", "-s", "./web"])
 
     def signal_handler(sig, frame):
-        logging.warning()
         logging.warning("You pressed Ctrl+C!")
         logging.warning("Stopping hugo...")
         p.send_signal(signal.SIGINT)
