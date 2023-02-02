@@ -22,7 +22,7 @@ At the root directory of your project, add a file named `.env` with the followin
 
 ```
 AUTHOR="Your Name"
-ACADEMIC_YEAR=2022-2023
+ACADEMIC_YEAR=2022/2023
 TYPE=ps6
 ```
 
