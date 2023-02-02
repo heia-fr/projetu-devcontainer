@@ -12,13 +12,23 @@ This script requires that you edit your project description in VSCode. It also r
 
 ## Installation
 
+Open a terminal in VSCode and run the following command:
+
 ```
 python3 -c "$(wget -q -O - https://raw.githubusercontent.com/heia-fr/projetu-devcontainer/main/install.py)"
 ```
 
+At the root directory of your project, add a file named `.env` with the following content:
+
+```
+AUTHOR_NAME="Your Name"
+ACADEMIC_YEAR=2022-2023
+TYPE=ps6
+```
+
 ## Usage
 
-Open the project in a VSCode devcontainer. Then open a terminal and run the following command:
+Open the project in a VSCode devcontainer. Then open a terminal and at the root directory of your project, run the following command:
 
 ```
 serve

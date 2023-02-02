@@ -14,8 +14,12 @@ from subprocess import call, Popen, PIPE
 import signal
 import sys
 import logging
+from dotenv import load_dotenv
 
-logging.basicConfig(level=logging.INFO)
+load_dotenv()
+logging.basicConfig(
+    level=logging.DEBUG if os.getenv("DEBUG") is not None else logging.INFO
+)
 
 
 def build(root):
@@ -29,19 +33,23 @@ def build(root):
     cmd = [
         "projetu-website-standalone",
         "--author",
-        "Jacques Supcik",
+        os.getenv("AUTHOR"),
         "--academic-year",
-        "2022/2023",
+        os.getenv("ACADEMIC_YEAR"),
         "--type",
-        "ps6",
+        os.getenv("TYPE"),
     ] + src
 
     return call(cmd)
 
 
 def main():
-    cwd = Path.cwd()
+    for k in ["AUTHOR", "ACADEMIC_YEAR", "TYPE"]:
+        if os.getenv(k) is None:
+            logging.error(f"{k} not set in .env")
+            sys.exit(1)
 
+    cwd = Path.cwd()
     os.chdir("/tmp")
 
     logging.info("cleaning...")
