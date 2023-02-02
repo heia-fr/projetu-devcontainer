@@ -3,6 +3,13 @@
 This repository contains a script to install a devcontainer for the Projetu project.
 This allows you to have a development environment that is identical to the one used by the CI/CD.
 
+## Requirements
+
+This script requires that you edit your project description in VSCode. It also requires that you have Docker installed.
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [VSCode](https://code.visualstudio.com/download)
+
 ## Installation
 
 ```
