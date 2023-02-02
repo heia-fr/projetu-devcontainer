@@ -21,7 +21,7 @@ python3 -c "$(wget -q -O - https://raw.githubusercontent.com/heia-fr/projetu-dev
 At the root directory of your project, add a file named `.env` with the following content:
 
 ```
-AUTHOR_NAME="Your Name"
+AUTHOR="Your Name"
 ACADEMIC_YEAR=2022-2023
 TYPE=ps6
 ```
