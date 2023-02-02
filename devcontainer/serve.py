@@ -2,7 +2,7 @@
 
 # Copyright (C) 2023 Jacques Supcik
 # Haute école d'ingénierie et d'architecture de Fribourg
-# SPDX-License-Identifier: APACHE-2.0 OR MIT
+# SPDX-License-Identifier: Apache-2.0 or MIT
 
 # Serve projetu website locally
 
